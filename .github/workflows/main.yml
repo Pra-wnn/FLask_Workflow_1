@@ -27,7 +27,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
         
-        -name: Print debugging information
+      - name: Print debugging information
         run: |
           echo "Python version $(python --version) running"
           echo "Pip version $(pip --version) running"
@@ -36,7 +36,7 @@ jobs:
           echo "Contents of Working Directory $(ls -l)"
           echo "Contents of site-packages $(ls -l venv/lib/python3.8/site-packages)"
 
-        -name: Run tests
+      - name: Run tests
         run: python test_first.py
 
           
