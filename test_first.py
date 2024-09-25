@@ -9,3 +9,12 @@ class TestHiWorld(unittest.TestCase):
     def test_hi_world(self):
         response = self.app.get('/')
         self.assertEqual(response.data, b'Hi, World!')
+    
+    def test_second_function(self):
+        response = self.app.get('/second')
+        self.assertEqual(response.data, b'Second Function Response')
+
+if __name__ == '__main__':
+    unittest.main()
+
+# Run the test:

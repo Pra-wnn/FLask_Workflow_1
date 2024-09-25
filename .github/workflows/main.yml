@@ -37,7 +37,10 @@ jobs:
           echo "Contents of site-packages $(ls -l venv/lib/python3.8/site-packages)"
 
       - name: Run tests
-        run: python test_first.py
+        run: python -m unittest discover
+        # python test_first.py
+         
+
 
           
 
